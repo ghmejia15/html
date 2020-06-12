@@ -1,0 +1,468 @@
+@font-face {
+    font-family: 'robotobold_condensed';
+    src: url('roboto-boldcondensed-webfont.woff2') format('woff2'),
+         url('roboto-boldcondensed-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotomedium';
+    src: url('roboto-medium-webfont.woff2') format('woff2'),
+         url('roboto-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+	font-family: 'robotobold_condensed';
+	background-color: #F6F6F6;
+}
+h2 {
+	color: #FFB700;
+	font-size: 50pt;
+	margin: 0;
+}
+p {
+	font-family: 'robotomedium';
+}
+
+section {
+	height: 900px;
+	margin-bottom: 100px;
+}
+#Intro {
+	position: relative;
+	height: 100%;
+	top: 100px;
+	bottom: 0;
+	padding: 9% 25%;
+}
+	#Intro img {
+		display: block;
+		margin: 0 auto;
+		float: left;
+		width: 50%;
+		margin-bottom: 40px;
+	}
+	#Intro h1{
+		color: #383838;
+		font-size: 40pt;
+		margin: 0 auto;
+		text-align: center;
+	}
+#Scaning {
+	width: 100%;
+	margin: 10px auto;
+	position: relative;
+}
+	#Scaning .textBox{
+		position: absolute;
+		bottom: 120px;
+		right: 10%;
+		width: 500px;
+		z-index: 2;
+	}
+	#Scaning h2 {
+		font-size: 50pt;
+		margin: 12px 0;
+	}
+	#Scaning p {
+		font-size: 20pt;
+		color: #9E9E9C;
+		margin: 0;
+	}
+	#Scaning #AHU {
+		position: absolute;
+		left: 35%;
+		width: 56%;
+		top: -5%;
+		z-index: 1;
+	}
+	#Scaning .ContractorG {
+		position: absolute;
+		bottom: 0px;
+		left: 0;
+		width: 540px;
+	}
+	#Scaning .ContractorG #Contractor1{
+		position: absolute;
+		bottom: 11px;
+		left: 0;
+		width: 100%;
+	}
+	#Scaning .ContractorG #Contractor2{
+		position: absolute;
+		bottom: 0px;
+		left: 200px;
+		width: 100%;
+	}
+	#Scaning #faroico {
+		position: absolute;
+		animation: LaserScaning 10s linear;
+		animation-iteration-count: infinite;
+	}
+	@keyframes LaserScaning {
+		0% {top: 20%; left:30%; width: 4%}
+		10% {top: 20%; left:30%; width: 4%}
+		15% {top: 52%; left:40%; width: 5%}
+		23% {top: 32%; left:72%; width: 5%; z-index: 2;}
+		30% {top: 32%; left:72%; width: 5%}
+		40% {top: 10%; left:92%; width: 3%}
+		50% {top: 10%; left:92%; width: 3%; z-index: 0;}
+		60% {top: -2%; left:60%; width: 2%}
+		70% {top: -2%; left:60%; width: 2%}
+		80% {top: 20%; left:30%; width: 4%}
+		100% {top: 20%; left:30%; width: 4%}
+	}
+	#LaserScan {
+		overflow: hidden;
+		position: relative;
+	}
+		#LaserScan .textBox {
+			position: absolute;
+			width: 450px;
+			right: 10%;
+			bottom: 120px;
+			margin-left: 2%;
+		}
+		h2 span{
+			color: #9E9E9C;
+		}
+		#LaserScan p {
+			font-size: 16pt;
+			color: #9E9E9C;
+			margin: 0;
+			float: left;
+		}
+		#Faro {
+			display: block;
+			position: absolute;
+			width: 35%;
+			float: left;
+			margin: 0 auto;
+		}
+		#FaroG {
+			float: left;
+		}
+		#FaroG #FaroPoints {
+			position: absolute;
+			display: block;
+			left: 15.6%;
+			width: 24%;
+			animation: PointLidar .8s linear;
+			animation-iteration-count: infinite;
+		}
+		#LaserScan #AHUContainer {
+			position: absolute;
+			left: 40%;
+		}
+		#LaserScan #AHUContainer img {
+			position: absolute;
+		}
+		#LaserScan #AHUContainer #AHUP {
+			opacity: 1;
+			animation: PointLidar .8s linear;
+			animation-iteration-count: infinite;
+		}
+		@keyframes PointLidar {
+			0% {opacity: 0;}
+			50% {opacity: 1;}
+			100% {opacity: .8;}
+		}
+	#PointCloud {
+		position: relative;
+		overflow: hidden;
+	}
+		#PointCloud img {
+		width: 100%;
+	}
+	#PointCloud h2 {
+		position: absolute;
+		top: 60px;
+		left: 30px;
+	}
+	#RevitCloud h2 {
+		text-align: center;
+		margin: 80px 0 0 0;
+		font-size: 30pt;
+	}
+	button {
+		float: left;
+		padding: 10px;
+	}
+	#Virtualize {
+		width: 100%;
+		position: relative;
+	}
+	#Virtualize h2 {
+		font-size: 30pt;
+		position: relative;
+		top: 14%;
+		left: 17%;
+	}
+	#Virtualize .Step01 {
+		position: absolute;
+		top: 50px;
+		background-image: url(img/Virtualizacion_01.png);
+		background-size: 95%;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	#Virtualize .Step02 {
+		position: absolute;
+		top: 50px;
+		background-image: url(img/Virtualizacion_02.png);
+		background-size: 95%;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
+	#Virtualize .Step03 {
+		position: absolute;
+		top: 50px;
+		background-image: url(img/Virtualizacion_04.png);
+		background-size: 95%;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		animation: StepTreeFrames 2s linear;
+	}
+	@keyframes StepTreeFrames {
+		0% {background-image: url(img/Virtualizacion_03.png)}
+		10% {background-image: url(img/Virtualizacion_03.png)}
+		50% {background-image: url(img/Virtualizacion_04.png)}
+	}
+
+	#Virtualize .Step04 {
+			position: absolute;
+			top: 50px;
+			background-image: url(img/Virtualizacion_05.png);
+			background-size: 95%;
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+		}
+	#Virtualize .Step05 {
+			position: absolute;
+			top: 50px;
+			background-image: url(img/Virtualizacion_09.png);
+			background-size: 95%;
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			animation: StepFiveFrames 3s linear;
+		}
+	@keyframes StepFiveFrames {
+		0% {background-image: url(img/Virtualizacion_05.png)}
+		25% {background-image: url(img/Virtualizacion_06.png)}
+		50% {background-image: url(img/Virtualizacion_07.png)}
+		75% {background-image: url(img/Virtualizacion_08.png)}
+		100% {background-image: url(img/Virtualizacion_09.png)}
+	}
+	#Virtualize .Step06 {
+			position: absolute;
+			top: 50px;
+			background-image: url(img/Virtualizacion_14.png);
+			background-size: 95%;
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			animation: StepSixFrames 5s;
+		}
+	@keyframes StepSixFrames {
+		0% {background-image: url(img/Virtualizacion_10.png)}
+		25% {background-image: url(img/Virtualizacion_11.png)}
+		50% {background-image: url(img/Virtualizacion_12.png)}
+		75% {background-image: url(img/Virtualizacion_13.png)}
+		100% {background-image: url(img/Virtualizacion_14.png)}
+	}
+	#Workflow {
+		display: table;
+		margin: 400px auto 0 auto;
+		overflow: hidden;
+		text-align: center;
+	} 
+	#Workflow .wf{
+		float: left;
+	}
+	#Workflow .wf img{
+		width: 55%;
+		transition: all .3s ease-out;
+	}
+		#Workflow .wf img:hover{
+			width: 80%;
+		}
+	#RevitCloud {
+		position: relative;
+		height: 100%;
+	}
+	#RevitCloud #Rvt01 {
+		background-image: url(img/RVTCloud01.png);
+		animation: lidar 8s;
+		animation-iteration-count: infinite;
+		background-size: 90%;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	#RevitCloud #Rvt01 img {
+		position: relative;
+		top: 0;
+	}
+	#motor {
+		position: absolute;
+		top: 400px;
+		left: 100px;
+		width: 500px;
+		height: 500px;
+		background: url(img/motorfan.png);
+		animation: run .4s steps(4) infinite;
+	}
+	@keyframes run {
+		100% {background-position: -2000px;}
+	}
+	@keyframes lidar {
+		0% {background-image: url(img/RVTCloud01.png)}
+		50% {background-image: url(img/RVTCloud02.png)}
+		100% {background-image: url(img/RVTCloud01.png)}
+	}
+	#secuence {
+		margin: 0 auto;
+		width: 1024px;
+		height: 559px;
+		background-image: 100%;
+		background-repeat: no-repeat;
+		background: url(img/installSecuense.jpg);
+		animation: secuence 4.5s steps(9) infinite;
+	}
+	#instal {
+		background-color: #0c0c0ccc;
+		position: relative;
+		padding-top: 100px;
+	}
+		#instal h2 {
+		font-size: 40pt;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	@keyframes secuence {
+		100% {background-position: -9216px;}
+	}
+	#Virtualize button {
+		position: absolute;
+		left: 45%;
+		z-index: 2;
+	}
+	#Equation {
+		position: relative;
+	}
+		#Equation img {
+		width: 90%;
+	}
+	#Equation .textBox{
+		position: absolute;
+		width: 600px;
+		right: 10%;
+		bottom: 120px;
+		margin-left: 2%;
+	}
+	#Equation .textBox p{
+		font-size: 16pt;
+		color: #9E9E9C;
+		margin: 0;
+		float: left;
+	}
+
+/* -------------------   Slider   ------------------------------*/
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  height: 100%;
+  width: 85%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+ 		cursor: pointer;
+ 		z-index: 2;
+		position: absolute;
+		top: 50px;
+		background-size: 95%;
+		background-repeat: no-repeat;
+		background-position: center;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+}
+
+/* Position the "next button" to the right */
+.next {
+	transform: rotate(180deg);
+  	width: 21.5%;
+  	right: 10%;
+}
+.prev {
+	left: 9.2%;
+	width: 21.5%;
+}
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  /*background-color: rgba(0,0,0,0.8);*/
+  background-image: url(img/Next.png);
+  opacity: 1;
+}
+#Requirements h2{
+	font-size: 34pt;
+	width: 100%;
+}
+#Requirements p{
+	font-size: 16pt;
+	color: #9E9E9C;
+	margin: 0;
+	float: left;
+}
+#Requirements img{
+	width: 100%;
+	float: right;
+}
+	#Requirements .textBox{
+		position: relative;
+		top: 120px;
+		left: 40px;
+		width: 700px;
+		float: left;
+	}
+#movil img{
+	width: 100%;
+}
+a#demo {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	width: 150px;
+	padding: 20px 30px;
+	color: #FFF;
+	background-color: #1A6DF5;
+	margin: 0 auto;
+	border-radius: 12px;
+}
+#demo:hover {
+	background-color: #86B3FC;
+}

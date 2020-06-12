@@ -1,37 +1,165 @@
-<HTML>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sigler | Unit handler Presentation</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script>
+	function MoveObj(el,clr) 
+	{
+		var elem = document.getElementById(el);
+		elem.style.transition = "top 1.0s linear 0s";
+		elem.style.top = clr;
+	}
 
-<HEAD>
+</script>
+</head>
+<body>
+<header></header>
+<main>
+	<section id="Intro">
+		<img src="img/Logo.png">
+		<img src="img/Logo-Carrier.png">
+		<h1>Air handler presentation</h1>
+	</section>
+	<section id="Workflow">
+ 		<a href="#Scaning" class="wf"><img src="img/SCANNING.png"></a>
+		<a href="#PointCloud" class="wf"><img src="img/POINTCLOUD.png"></a>
+		<a href="#RevitCloud" class="wf"><img src="img/REVIT.png"></a>
+		<a href="#Virtualize" class="wf"><img src="img/VIRTUALIZE.png"></a>
+	</section>
+	<section id="Scaning">
+		<div class="textBox">
+			<h2>LIDAR <span>SCAN</span></h2>
+			<p>Cloud points, Scaning process from diferents points</p>
+		</div>
+		<img id="AHU" src="img/AHU.png">
+		<div class="ContractorG"> 
+			<img id="Contractor1" src="img/Contractor01.png">
+			<img id="Contractor2" src="img/Contractor02.png">
+			<img id="shadow" src="img/Shadow_Contractor.png">
+		</div>
+		<img id="faroico" src="img/faroico.png">
+		<!-- <button onclick="MoveObj('Contractor', '300px')">Down</button>
+		<button onclick="MoveObj('Contractor', '120px')">Up</button> -->
+	</section>
+	<section id="LaserScan">
+		<div class="textBox">
+			<h2>Faro</h2>
+			<p>Works in a similar way to Radar and Sonar yet uses light waves from a laser, instead of radio or sound waves.</p>
+		</div>
+		<div id="FaroG">
+			<img id="Faro" src="img/Faro.png">
+			<img id="FaroPoints" src="img/Points_scan_Direccion.png">
+		</div>
+		<div id="AHUContainer">
+			<img id="AHU" src="img/AHU.png">
+			<img id="AHUP" src="img/Points_scan.png">
+		</div>
+	</section>
+	<section id="PointCloud">
+		<h2>Point cloud generated</h2>
+		<img src="img/AHUPointCloud.jpg">
+	</section>
+	<section id="RevitCloud">
+		<h2>Vectorization of the point cloud in Revit</h2>
+		<div id="Rvt01"><img src="img/RVTCloud01_none.png"></div>
+		<!-- <img src="img/RVTCloud01.png"> -->
+	</section>
+	<section id="Virtualize">
+		<h2>Analyze the virtualized model</h2>
+		<div class="slideshow-container">
+				<div class="mySlides fade Step01"></div>
+				<div class="mySlides fade Step02"></div>
+				<div class="mySlides fade Step03"></div>
+				<div class="mySlides fade Step04"></div>
+				<div class="mySlides fade Step05"></div>
+				<div class="mySlides fade Step06"></div>
+				<a class="prev" onclick="plusSlides(-1)"></a>
+				<a class="next" onclick="plusSlides(1)"></a>
+			</div>
+	</section>
+	<section id="Equation">
+		<div id="motor"></div>
+		<div class="textBox">
+			<h2>Accountabily Equation</h2>
+			<p>Calculating the cost of operation (Lifecycle)</p>
+		</div>
+		<img src="img/Equation.jpg">
+	</section>
+	<section id="Requirements">
+		<div class="textBox">
+			<h2>Additional <span>requirements</span></h2>
+			<p>Based on field survey and EQR requirements</p>
+		</div>
+		<img src="img/Requirements.jpg">
+<!-- 		<ul>
+			<li><img src="img/Cooling.png">More cooling</li>
+			<li><img src="img/StaticPressure.png">More static pressure</li>
+			<li><img src="img/Airflow.png">More Airflow</li>
+			<li><img src="img/Filtration.png">Improve filtration</li>
+		</ul> -->
+	</section>
+	<section id="Report">
+		<div id="movil">
+			<img src="img/movilReport.png">
+			<a href="#instal"></a>
+		</div>
+	</section>
+	<section id="instal">
+		<h2>Installation proposal simulation</h2>
+		<div id="secuence"></div>
+	</section>
+	<section id="Approval">
+		<img style="width: 100%" src="img/approval.png">
+	</section>
+	<section id="track">
+		<img style="width: 100%" src="img/track.png">
+	</section>
+	<section id="track">
+		<img style="width: 100%" src="img/hans.png">
+	</section>
+	<section>
+		<a class="dem" style="display: block;
+	text-align: center;
+	text-decoration: none;
+	width: 150px;
+	padding: 20px 30px;
+	color: #FFF;
+	background-color: #1A6DF5;
+	margin: 0 auto;
+	border-radius: 12px;" href="exe/index.html">Demo</a>
+	</section>
+</main>
+<footer>
+</footer>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
 
-<TITLE>Your Title Here</TITLE>
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-</HEAD>
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-<BODY BGCOLOR="FFFFFF">
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
-<CENTER><IMG SRC="clouds.jpg" ALIGN="BOTTOM"> </CENTER>
-
-<HR>
-
-<a href="http://somegreatsite.com">Link Name</a>
-
-is a link to another nifty site
-
-<H1>This is a Header</H1>
-
-<H2>This is a Medium Header</H2>
-
-Send me mail at <a href="mailto:support@yourcompany.com">
-
-support@yourcompany.com</a>.
-
-<P> This is a new paragraph!
-
-<P> <B>This is a new paragraph!</B>
-
-<BR> <B><I>This is a new sentence without a paragraph break, in bold italics.</I></B>
-
-<HR>
-
-</BODY>
-
-</HTML>
+</body>
+</html>
