@@ -29,6 +29,10 @@ section {
 	height: 900px;
 	margin-bottom: 100px;
 }
+main {
+	width: 100%;
+	overflow: hidden;
+}
 #Intro {
 	position: relative;
 	height: 100%;
@@ -196,13 +200,12 @@ section {
 	#Virtualize h2 {
 		font-size: 30pt;
 		position: relative;
-		top: 14%;
-		left: 17%;
+		left: 10%;
 	}
 	#Virtualize .Step01 {
 		position: absolute;
 		top: 50px;
-		background-image: url(img/Virtualizacion_01.png);
+		background-image: url(img/Virtualizacion_01.jpg);
 		background-size: 95%;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -213,7 +216,7 @@ section {
 	#Virtualize .Step02 {
 		position: absolute;
 		top: 50px;
-		background-image: url(img/Virtualizacion_02.png);
+		background-image: url(img/Virtualizacion_02.jpg);
 		background-size: 95%;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -224,7 +227,7 @@ section {
 	#Virtualize .Step03 {
 		position: absolute;
 		top: 50px;
-		background-image: url(img/Virtualizacion_04.png);
+		background-image: url(img/Virtualizacion_04.jpg);
 		background-size: 95%;
 		background-repeat: no-repeat;
 		background-position: center;
@@ -234,15 +237,15 @@ section {
 		animation: StepTreeFrames 2s linear;
 	}
 	@keyframes StepTreeFrames {
-		0% {background-image: url(img/Virtualizacion_03.png)}
-		10% {background-image: url(img/Virtualizacion_03.png)}
-		50% {background-image: url(img/Virtualizacion_04.png)}
+		0% {background-image: url(img/Virtualizacion_03.jpg)}
+		10% {background-image: url(img/Virtualizacion_03.jpg)}
+		50% {background-image: url(img/Virtualizacion_04.jpg)}
 	}
 
 	#Virtualize .Step04 {
 			position: absolute;
 			top: 50px;
-			background-image: url(img/Virtualizacion_05.png);
+			background-image: url(img/Virtualizacion_05.jpg);
 			background-size: 95%;
 			background-repeat: no-repeat;
 			background-position: center;
@@ -253,7 +256,7 @@ section {
 	#Virtualize .Step05 {
 			position: absolute;
 			top: 50px;
-			background-image: url(img/Virtualizacion_09.png);
+			background-image: url(img/Virtualizacion_09.jpg);
 			background-size: 95%;
 			background-repeat: no-repeat;
 			background-position: center;
@@ -263,16 +266,16 @@ section {
 			animation: StepFiveFrames 3s linear;
 		}
 	@keyframes StepFiveFrames {
-		0% {background-image: url(img/Virtualizacion_05.png)}
-		25% {background-image: url(img/Virtualizacion_06.png)}
-		50% {background-image: url(img/Virtualizacion_07.png)}
-		75% {background-image: url(img/Virtualizacion_08.png)}
-		100% {background-image: url(img/Virtualizacion_09.png)}
+		0% {background-image: url(img/Virtualizacion_05.jpg)}
+		25% {background-image: url(img/Virtualizacion_06.jpg)}
+		50% {background-image: url(img/Virtualizacion_07.jpg)}
+		75% {background-image: url(img/Virtualizacion_08.jpg)}
+		100% {background-image: url(img/Virtualizacion_09.jpg)}
 	}
 	#Virtualize .Step06 {
 			position: absolute;
 			top: 50px;
-			background-image: url(img/Virtualizacion_14.png);
+			background-image: url(img/Virtualizacion_14.jpg);
 			background-size: 95%;
 			background-repeat: no-repeat;
 			background-position: center;
@@ -282,11 +285,11 @@ section {
 			animation: StepSixFrames 5s;
 		}
 	@keyframes StepSixFrames {
-		0% {background-image: url(img/Virtualizacion_10.png)}
-		25% {background-image: url(img/Virtualizacion_11.png)}
-		50% {background-image: url(img/Virtualizacion_12.png)}
-		75% {background-image: url(img/Virtualizacion_13.png)}
-		100% {background-image: url(img/Virtualizacion_14.png)}
+		0% {background-image: url(img/Virtualizacion_10.jpg)}
+		25% {background-image: url(img/Virtualizacion_11.jpg)}
+		50% {background-image: url(img/Virtualizacion_12.jpg)}
+		75% {background-image: url(img/Virtualizacion_13.jpg)}
+		100% {background-image: url(img/Virtualizacion_14.jpg)}
 	}
 	#Workflow {
 		display: table;
@@ -347,6 +350,7 @@ section {
 		animation: secuence 4.5s steps(9) infinite;
 	}
 	#instal {
+		overflow: hidden;
 		background-color: #0c0c0ccc;
 		position: relative;
 		padding-top: 100px;
@@ -452,7 +456,7 @@ body {font-family: Verdana, sans-serif; margin:0}
 #movil img{
 	width: 100%;
 }
-a#demo {
+.dem {
 	display: block;
 	text-align: center;
 	text-decoration: none;
@@ -465,4 +469,11 @@ a#demo {
 }
 #demo:hover {
 	background-color: #86B3FC;
+}
+
+@media only screen and (max-width: 1120px) {
+  #Scaning .textBox {
+    right: 0;
+    width: 470px;
+  }
 }
