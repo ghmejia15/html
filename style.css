@@ -28,6 +28,7 @@ p {
 section {
 	height: 900px;
 	margin-bottom: 100px;
+	overflow: hidden;
 }
 main {
 	width: 100%;
@@ -86,6 +87,7 @@ main {
 		bottom: 0px;
 		left: 0;
 		width: 540px;
+		z-index: 10;
 	}
 	#Scaning .ContractorG #Contractor1{
 		position: absolute;
@@ -426,6 +428,22 @@ body {font-family: Verdana, sans-serif; margin:0}
 	left: 9.2%;
 	width: 21.5%;
 }
+
+.dem {
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	width: 150px;
+	padding: 20px 30px;
+	color: #FFF;
+	background-color: #1A6DF5;
+	margin: 0 auto;
+	border-radius: 12px;
+}
+.dem:hover {
+	background-color: #86B3FC;
+}
+
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   /*background-color: rgba(0,0,0,0.8);*/
@@ -453,22 +471,39 @@ body {font-family: Verdana, sans-serif; margin:0}
 		width: 700px;
 		float: left;
 	}
+
+#movil{
+	position: relative;
+}
 #movil img{
 	width: 100%;
 }
-.dem {
-	display: block;
-	text-align: center;
-	text-decoration: none;
-	width: 150px;
-	padding: 20px 30px;
-	color: #FFF;
-	background-color: #1A6DF5;
-	margin: 0 auto;
-	border-radius: 12px;
+
+#movil .textBox{
+	width: 490px;
+	position: absolute;
+	top: 360px;
+	right: 50px;
 }
-#demo:hover {
-	background-color: #86B3FC;
+#movil .textBox p{
+	font-size: 16pt;
+	color: #9E9E9C;
+	margin: 0;
+	float: left;
+}
+
+@media only screen and (max-width: 1260px) {
+
+	#Equation .textBox{
+		width: 560px;
+		right: 0;
+	}
+	#Equation .textBox h2{
+		font-size: 40pt;
+	}
+	#Equation .textBox p{
+		font-size: 16pt;
+	}
 }
 
 @media only screen and (max-width: 1120px) {
