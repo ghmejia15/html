@@ -58,6 +58,7 @@ main {
 	width: 100%;
 	margin: 10px auto;
 	position: relative;
+	overflow: initial;
 }
 	#Scaning .textBox{
 		position: absolute;
@@ -127,7 +128,7 @@ main {
 			position: absolute;
 			width: 450px;
 			right: 10%;
-			bottom: 120px;
+			top: 600px;
 			margin-left: 2%;
 		}
 		h2 span{
@@ -203,6 +204,7 @@ main {
 		font-size: 30pt;
 		position: relative;
 		left: 10%;
+		top: 8%;
 	}
 	#Virtualize .Step01 {
 		position: absolute;
@@ -380,7 +382,7 @@ main {
 		position: absolute;
 		width: 600px;
 		right: 10%;
-		bottom: 120px;
+		top: 500px;
 		margin-left: 2%;
 	}
 	#Equation .textBox p{
@@ -503,6 +505,19 @@ body {font-family: Verdana, sans-serif; margin:0}
 	}
 	#Equation .textBox p{
 		font-size: 16pt;
+	}
+}
+
+@media only screen and (min-width: 1745px) {
+
+	section {
+		height: 1340px;
+		margin-bottom: 100px;
+		overflow: hidden;
+	}
+
+	#Scaning {
+		height: 1024px;
 	}
 }
 
